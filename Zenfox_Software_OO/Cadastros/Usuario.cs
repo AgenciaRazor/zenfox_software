@@ -50,7 +50,7 @@ namespace Zenfox_Software_OO.Cadastros
         {
             Int32 id = 0;
 
-            data.bd sql = new data.bd();
+            data.bd_postgres sql = new data.bd_postgres();
 
             StringBuilder sb = new StringBuilder();
 
@@ -59,12 +59,15 @@ namespace Zenfox_Software_OO.Cadastros
 
                 sb.AppendLine("select id from usuario where usuario = '"+item.usuario+"' and senha = '"+item.senha+"'");
 
-                sql.abrir_conexao();
-                DataTable dr = sql.selectQuery(sb.ToString());
+                sql.localdb();
+                sql.AbrirConexao();
+                sql.Comando = new Npgsql.NpgsqlCommand();
+                sql.Comando.CommandText = sb.ToString();
+                DataTable dr = sql.RetornaDados_v2_dt();
 
                 if(dr.Rows.Count > 0)
                 {
-                    id = Int32.Parse(dr.Rows[0].ToString());
+                    id = Int32.Parse(dr.Rows[0].ItemArray[0].ToString());
                 }
 
             }
@@ -73,9 +76,9 @@ namespace Zenfox_Software_OO.Cadastros
 
             }
 
-            sql.abrir_conexao();
-            sql.selectQuery(sb.ToString());
-            sql.fecha_conexao();
+           // sql.abrir_conexao();
+           // sql.selectQuery(sb.ToString());
+           // sql.fecha_conexao();
 
             return id;
         }

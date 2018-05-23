@@ -43,9 +43,10 @@ namespace Zenfox_Software_OO.Cadastros
             sql.localdb();
             sql.AbrirConexao();
             sql.Comando = new Npgsql.NpgsqlCommand();
-            sql.Comando.CommandText = "select * from produto where id = " + item.id;
+            sql.Comando.CommandText = "select * from produto where id = " + item.id + " or ean = '"+item.ean+"'";
             IDataReader dr = sql.RetornaDados_v2();
 
+            Int32 id = dr.GetOrdinal("id");
             Int32 fornecedor = dr.GetOrdinal("fornecedor");
             Int32 xnome = dr.GetOrdinal("nome");
             Int32 data_cadastro = dr.GetOrdinal("data_cadastro");
@@ -63,6 +64,8 @@ namespace Zenfox_Software_OO.Cadastros
             
             while (dr.Read())
             {
+                item.id = dr.GetInt32(id);
+
                 if(!dr.IsDBNull(fornecedor))
                     item.fornecedor = dr.GetInt32(fornecedor);
 
@@ -102,13 +105,23 @@ namespace Zenfox_Software_OO.Cadastros
             return dt;
         }
 
-        public DataTable seleciona_listagem()
+        public DataTable seleciona_listagem(Entidade_Produto item)
         {
             data.bd_postgres sql = new data.bd_postgres();
             sql.localdb();
             sql.AbrirConexao();
             sql.Comando = new Npgsql.NpgsqlCommand();
-            sql.Comando.CommandText = "select id,data_cadastro,nome,estoque,estoque_minimo,valor_compra,valor_venda,ean,ncm,cfop from produto ";
+
+            StringBuilder sb = new StringBuilder();
+            sb.Append("select id,data_cadastro,nome,estoque,estoque_minimo,valor_compra,valor_venda,ean,ncm,cfop from produto where 1 = 1 ");
+
+            if (item.nome_produto != "" && item.nome_produto != null)
+            {
+                sb.Append("and nome ilike '"+item.nome_produto+"%'");
+                sql.Comando.Parameters.AddWithValue("@nome", item.nome_produto);
+            }
+
+            sql.Comando.CommandText = sb.ToString();
             DataTable dt = sql.RetornaDados_v2_dt();
             sql.FechaConexao();
             return dt;

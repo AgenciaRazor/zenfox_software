@@ -17,7 +17,7 @@ namespace Zenfox_Software.Cadastros
         public Produto()
         {
             InitializeComponent();            
-            dataGridView1.DataSource = cmd_produto.seleciona_listagem();
+            dataGridView1.DataSource = cmd_produto.seleciona_listagem(new Zenfox_Software_OO.Cadastros.Entidade_Produto());
 
         }
 
@@ -28,7 +28,7 @@ namespace Zenfox_Software.Cadastros
         {
             Produto_Cadastro cmd = new Produto_Cadastro();
             cmd.ShowDialog();
-            dataGridView1.DataSource = cmd_produto.seleciona_listagem();
+            dataGridView1.DataSource = cmd_produto.seleciona_listagem(new Zenfox_Software_OO.Cadastros.Entidade_Produto());
         }
 
         private void Produto_Load(object sender, EventArgs e)
@@ -60,7 +60,7 @@ namespace Zenfox_Software.Cadastros
                 cmd.id = Int32.Parse(dataGridView1.CurrentRow.Cells[0].Value.ToString());
                 cmd.preenche_campos();
                 cmd.ShowDialog();
-                dataGridView1.DataSource = cmd_produto.seleciona_listagem();
+                dataGridView1.DataSource = cmd_produto.seleciona_listagem(new Zenfox_Software_OO.Cadastros.Entidade_Produto());
             }
             catch
             {

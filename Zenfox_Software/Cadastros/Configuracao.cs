@@ -31,8 +31,6 @@ namespace Zenfox_Software.Cadastros
 
         private void Configuracao_Load(object sender, EventArgs e){
             
-            
-
         }
 
         private void button3_Click(object sender, EventArgs e)
@@ -43,6 +41,19 @@ namespace Zenfox_Software.Cadastros
         private void button5_Click(object sender, EventArgs e)
         {
             lista_impressoras();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            try { 
+                Zenfox_Software_OO.ACBR acbr = new Zenfox_Software_OO.ACBR();
+                acbr.configura_acbr("", "", "", "");
+                MessageBox.Show("SAT Configurado com sucesso !");
+            }
+            catch
+            {
+                MessageBox.Show("Falha ao configurar SAT !");
+            }
         }
     }
 }

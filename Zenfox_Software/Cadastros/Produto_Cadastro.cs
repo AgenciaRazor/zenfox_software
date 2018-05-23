@@ -35,7 +35,7 @@ namespace Zenfox_Software.Cadastros
             txtPreco_Venda.Text = item.valor_venda.ToString();
             txtPreco_Atacado.Text = item.valor_venda_atacado.ToString();
             txtPreco_Venda_Margem.Text = item.valor_venda_margem.ToString();
-            txtPreco_Atacado_Margem.Text = item.valor_venda_atacado_margem.ToString();
+            //txtPreco_Atacado_Margem.Text = item.valor_venda_atacado_margem.ToString();
 
             txtNCM.Text = item.ncm;
 
@@ -139,10 +139,10 @@ namespace Zenfox_Software.Cadastros
                                 else
                                     item.valor_venda_atacado = 0;
 
-                                if (txtPreco_Atacado_Margem.Text.Length > 0)
-                                    item.valor_venda_atacado_margem = Double.Parse(txtPreco_Atacado_Margem.Text);
-                                else
-                                    item.valor_venda_atacado_margem = 0;
+                               // if (txtPreco_Atacado_Margem.Text.Length > 0)
+                               //     item.valor_venda_atacado_margem = Double.Parse(txtPreco_Atacado_Margem.Text);
+                               // else
+                               //     item.valor_venda_atacado_margem = 0;
                                 #endregion
 
                                 item.cfop = Int32.Parse(txtCFOP.SelectedItem.ToString().Split('-')[0].Trim());
@@ -205,16 +205,16 @@ namespace Zenfox_Software.Cadastros
                         txtCFOP.Focus();
                     }
                 }
-                catch
+                catch(Exception ee)
                 {
-                    MessageBox.Show("Você precisa informar o CFOP deste produto");
-                    tabControl1.SelectedTab = tabPage2;
-                    txtCFOP.Focus();
+                    MessageBox.Show(ee.Message);
+                   // tabControl1.SelectedTab = tabPage2;
+                   // txtNCM.Focus();
                 }
             }
             else
             {
-                MessageBox.Show("Você precisa informar o NCM deste produto");
+                MessageBox.Show("Você precisa informar o NCM válido deste produto");
                 tabControl1.SelectedTab = tabPage2;
                 txtNCM.Focus();
             }
@@ -614,7 +614,9 @@ namespace Zenfox_Software.Cadastros
             }
         }
 
+        private void txtValor_Compra_TextChanged(object sender, EventArgs e)
+        {
 
-
+        }
     }
 }

@@ -31,6 +31,7 @@
             this.components = new System.ComponentModel.Container();
             this.label1 = new System.Windows.Forms.Label();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.atualizacao = new System.ComponentModel.BackgroundWorker();
             this.SuspendLayout();
             // 
             // label1
@@ -39,9 +40,10 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 30F);
-            this.label1.Location = new System.Drawing.Point(12, 9);
+            this.label1.Location = new System.Drawing.Point(9, 7);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(463, 94);
+            this.label1.Size = new System.Drawing.Size(347, 76);
             this.label1.TabIndex = 0;
             this.label1.Text = "Inicializando";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -53,14 +55,21 @@
             this.timer1.Interval = 500;
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
+            // atualizacao
+            // 
+            this.atualizacao.WorkerReportsProgress = true;
+            this.atualizacao.WorkerSupportsCancellation = true;
+            this.atualizacao.DoWork += new System.ComponentModel.DoWorkEventHandler(this.atualizacao_DoWork);
+            // 
             // Inicializando
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(487, 112);
+            this.ClientSize = new System.Drawing.Size(365, 91);
             this.ControlBox = false;
             this.Controls.Add(this.label1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "Inicializando";
@@ -77,5 +86,6 @@
 
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Timer timer1;
+        private System.ComponentModel.BackgroundWorker atualizacao;
     }
 }

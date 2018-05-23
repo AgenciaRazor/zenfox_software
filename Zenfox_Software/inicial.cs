@@ -107,7 +107,7 @@ namespace Zenfox_Software
                             cmd_sinc.id = this.id;
                             cmd_sinc.ShowDialog();
 
-                            Dashboard dash = new Dashboard();
+                            Dashboard dash = new Dashboard(this.id);
                             dash.Show();
                             
                         }

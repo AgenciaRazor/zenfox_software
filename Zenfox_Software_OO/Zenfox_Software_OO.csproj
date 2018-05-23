@@ -76,6 +76,8 @@
     <Compile Include="Cadastros\Fornecedor.cs" />
     <Compile Include="Cadastros\Produto.cs" />
     <Compile Include="Cadastros\Usuario.cs" />
+    <Compile Include="Cadastros\Vendas.cs" />
+    <Compile Include="Caixa\Caixa.cs" />
     <Compile Include="Class1.cs" />
     <Compile Include="data\bd.cs" />
     <Compile Include="data\bd_postgres.cs" />

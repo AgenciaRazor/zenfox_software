@@ -1,36 +1,19 @@
-c:\users\natanniel\documents\visual studio 2013\Projects\Zenfox_Software\Zenfox_Software_OO\bin\Debug\Zenfox_Software_OO.dll.config
-c:\users\natanniel\documents\visual studio 2013\Projects\Zenfox_Software\Zenfox_Software_OO\bin\Debug\Zenfox_Software_OO.dll
-c:\users\natanniel\documents\visual studio 2013\Projects\Zenfox_Software\Zenfox_Software_OO\bin\Debug\Zenfox_Software_OO.pdb
-c:\users\natanniel\documents\visual studio 2013\Projects\Zenfox_Software\Zenfox_Software_OO\bin\Debug\EntityFramework.dll
-c:\users\natanniel\documents\visual studio 2013\Projects\Zenfox_Software\Zenfox_Software_OO\bin\Debug\EntityFramework.SqlServer.dll
-c:\users\natanniel\documents\visual studio 2013\Projects\Zenfox_Software\Zenfox_Software_OO\bin\Debug\System.Data.SQLite.dll
-c:\users\natanniel\documents\visual studio 2013\Projects\Zenfox_Software\Zenfox_Software_OO\bin\Debug\System.Data.SQLite.EF6.dll
-c:\users\natanniel\documents\visual studio 2013\Projects\Zenfox_Software\Zenfox_Software_OO\bin\Debug\System.Data.SQLite.Linq.dll
-c:\users\natanniel\documents\visual studio 2013\Projects\Zenfox_Software\Zenfox_Software_OO\bin\Debug\EntityFramework.xml
-c:\users\natanniel\documents\visual studio 2013\Projects\Zenfox_Software\Zenfox_Software_OO\bin\Debug\EntityFramework.SqlServer.xml
-c:\users\natanniel\documents\visual studio 2013\Projects\Zenfox_Software\Zenfox_Software_OO\bin\Debug\System.Data.SQLite.xml
-c:\users\natanniel\documents\visual studio 2013\Projects\Zenfox_Software\Zenfox_Software_OO\obj\Debug\Zenfox_Software_OO.csprojResolveAssemblyReference.cache
-c:\users\natanniel\documents\visual studio 2013\Projects\Zenfox_Software\Zenfox_Software_OO\obj\Debug\Zenfox_Software_OO.dll
-c:\users\natanniel\documents\visual studio 2013\Projects\Zenfox_Software\Zenfox_Software_OO\obj\Debug\Zenfox_Software_OO.pdb
-c:\users\natanniel\documents\visual studio 2013\Projects\Zenfox_Software\Zenfox_Software_OO\bin\Debug\Npgsql.dll
-c:\users\natanniel\documents\visual studio 2013\Projects\Zenfox_Software\Zenfox_Software_OO\bin\Debug\System.Threading.Tasks.Extensions.dll
-c:\users\natanniel\documents\visual studio 2013\Projects\Zenfox_Software\Zenfox_Software_OO\bin\Debug\Npgsql.xml
-c:\users\natanniel\documents\visual studio 2013\Projects\Zenfox_Software\Zenfox_Software_OO\bin\Debug\System.Threading.Tasks.Extensions.xml
-C:\Users\Natanniel\Desktop\Zenfox_Software\Zenfox_Software_OO\bin\Debug\Zenfox_Software_OO.dll.config
-C:\Users\Natanniel\Desktop\Zenfox_Software\Zenfox_Software_OO\bin\Debug\Zenfox_Software_OO.dll
-C:\Users\Natanniel\Desktop\Zenfox_Software\Zenfox_Software_OO\bin\Debug\Zenfox_Software_OO.pdb
-C:\Users\Natanniel\Desktop\Zenfox_Software\Zenfox_Software_OO\bin\Debug\EntityFramework.dll
-C:\Users\Natanniel\Desktop\Zenfox_Software\Zenfox_Software_OO\bin\Debug\EntityFramework.SqlServer.dll
-C:\Users\Natanniel\Desktop\Zenfox_Software\Zenfox_Software_OO\bin\Debug\Npgsql.dll
-C:\Users\Natanniel\Desktop\Zenfox_Software\Zenfox_Software_OO\bin\Debug\System.Data.SQLite.dll
-C:\Users\Natanniel\Desktop\Zenfox_Software\Zenfox_Software_OO\bin\Debug\System.Data.SQLite.EF6.dll
-C:\Users\Natanniel\Desktop\Zenfox_Software\Zenfox_Software_OO\bin\Debug\System.Data.SQLite.Linq.dll
-C:\Users\Natanniel\Desktop\Zenfox_Software\Zenfox_Software_OO\bin\Debug\System.Threading.Tasks.Extensions.dll
-C:\Users\Natanniel\Desktop\Zenfox_Software\Zenfox_Software_OO\bin\Debug\EntityFramework.xml
-C:\Users\Natanniel\Desktop\Zenfox_Software\Zenfox_Software_OO\bin\Debug\EntityFramework.SqlServer.xml
-C:\Users\Natanniel\Desktop\Zenfox_Software\Zenfox_Software_OO\bin\Debug\Npgsql.xml
-C:\Users\Natanniel\Desktop\Zenfox_Software\Zenfox_Software_OO\bin\Debug\System.Data.SQLite.xml
-C:\Users\Natanniel\Desktop\Zenfox_Software\Zenfox_Software_OO\bin\Debug\System.Threading.Tasks.Extensions.xml
-C:\Users\Natanniel\Desktop\Zenfox_Software\Zenfox_Software_OO\obj\Debug\Zenfox_Software_OO.csprojResolveAssemblyReference.cache
-C:\Users\Natanniel\Desktop\Zenfox_Software\Zenfox_Software_OO\obj\Debug\Zenfox_Software_OO.dll
-C:\Users\Natanniel\Desktop\Zenfox_Software\Zenfox_Software_OO\obj\Debug\Zenfox_Software_OO.pdb
+C:\Users\Natanniel\ZFox_Software\Zenfox_Software_OO\bin\Debug\Zenfox_Software_OO.dll.config
+C:\Users\Natanniel\ZFox_Software\Zenfox_Software_OO\bin\Debug\Zenfox_Software_OO.dll
+C:\Users\Natanniel\ZFox_Software\Zenfox_Software_OO\bin\Debug\Zenfox_Software_OO.pdb
+C:\Users\Natanniel\ZFox_Software\Zenfox_Software_OO\bin\Debug\EntityFramework.dll
+C:\Users\Natanniel\ZFox_Software\Zenfox_Software_OO\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Natanniel\ZFox_Software\Zenfox_Software_OO\bin\Debug\Npgsql.dll
+C:\Users\Natanniel\ZFox_Software\Zenfox_Software_OO\bin\Debug\System.Data.SQLite.dll
+C:\Users\Natanniel\ZFox_Software\Zenfox_Software_OO\bin\Debug\System.Data.SQLite.EF6.dll
+C:\Users\Natanniel\ZFox_Software\Zenfox_Software_OO\bin\Debug\System.Data.SQLite.Linq.dll
+C:\Users\Natanniel\ZFox_Software\Zenfox_Software_OO\bin\Debug\System.Threading.Tasks.Extensions.dll
+C:\Users\Natanniel\ZFox_Software\Zenfox_Software_OO\bin\Debug\EntityFramework.xml
+C:\Users\Natanniel\ZFox_Software\Zenfox_Software_OO\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Natanniel\ZFox_Software\Zenfox_Software_OO\bin\Debug\Npgsql.xml
+C:\Users\Natanniel\ZFox_Software\Zenfox_Software_OO\bin\Debug\System.Data.SQLite.xml
+C:\Users\Natanniel\ZFox_Software\Zenfox_Software_OO\bin\Debug\System.Data.SQLite.dll.config
+C:\Users\Natanniel\ZFox_Software\Zenfox_Software_OO\bin\Debug\System.Threading.Tasks.Extensions.xml
+C:\Users\Natanniel\ZFox_Software\Zenfox_Software_OO\obj\Debug\Zenfox_Software_OO.csproj.CoreCompileInputs.cache
+C:\Users\Natanniel\ZFox_Software\Zenfox_Software_OO\obj\Debug\Zenfox_Software_OO.dll
+C:\Users\Natanniel\ZFox_Software\Zenfox_Software_OO\obj\Debug\Zenfox_Software_OO.pdb

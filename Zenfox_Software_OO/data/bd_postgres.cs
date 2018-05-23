@@ -24,13 +24,13 @@ namespace Zenfox_Software_OO.data
 
         public void testa(String x)
         {
-            this.ConnectionString = "DATABASE=sat_new;Pooling=False;" + x + ";UID=razor_sat;Password=Pk192168@q2aw3@se4;";
+            this.ConnectionString = "DATABASE=razor_sat;Pooling=False;" + x + ";UID=razor_sat;Password=Pk192168@q2aw3@se4;";
         }
 
         public void localdb()
         {
             String localdb = System.IO.File.ReadAllText(@System.AppDomain.CurrentDomain.BaseDirectory.ToString() + "bd.txt");
-            this.ConnectionString = "DATABASE=sat_new;Pooling=False;" + localdb + ";UID=razor_sat;Password=Pk192168@q2aw3@se4;";
+            this.ConnectionString = "DATABASE=razor_sat;Pooling=False;" + localdb + ";UID=razor_sat;Password=Pk192168@q2aw3@se4;";
 
         }
 
