@@ -17,7 +17,26 @@ namespace Zenfox_Software.Cadastros
         {
             InitializeComponent();
             lista_impressoras();
+
+            Zenfox_Software_OO.Cadastros.Entidade_Configuracao item = new Zenfox_Software_OO.Cadastros.Entidade_Configuracao();
+
+            Zenfox_Software_OO.Cadastros.Configuracao cmd = new Zenfox_Software_OO.Cadastros.Configuracao();
+            item = cmd.seleciona(item);
+
+            cb_validar_ncm.Checked = item.valida_ncm;
+            
+            
         }
+
+        public void atualiza()
+        {
+            Zenfox_Software_OO.Cadastros.Entidade_Configuracao item = new Zenfox_Software_OO.Cadastros.Entidade_Configuracao();
+            Zenfox_Software_OO.Cadastros.Configuracao cmd = new Zenfox_Software_OO.Cadastros.Configuracao();
+
+            item.valida_ncm = cb_validar_ncm.Checked;
+            cmd.atualiza(item);
+        }
+
 
         public void lista_impressoras()
         {
@@ -54,6 +73,11 @@ namespace Zenfox_Software.Cadastros
             {
                 MessageBox.Show("Falha ao configurar SAT !");
             }
+        }
+
+        private void cb_validar_ncm_CheckedChanged(object sender, EventArgs e)
+        {
+            atualiza();
         }
     }
 }

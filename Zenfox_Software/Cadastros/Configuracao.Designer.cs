@@ -42,17 +42,19 @@
             this.button1 = new System.Windows.Forms.Button();
             this.button5 = new System.Windows.Forms.Button();
             this.label6 = new System.Windows.Forms.Label();
+            this.cb_validar_ncm = new System.Windows.Forms.CheckBox();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.cb_validar_ncm);
             this.groupBox1.Controls.Add(this.combo_impressora);
             this.groupBox1.Controls.Add(this.label5);
             this.groupBox1.Location = new System.Drawing.Point(9, 116);
-            this.groupBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(2);
             this.groupBox1.Size = new System.Drawing.Size(584, 298);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
@@ -62,7 +64,7 @@
             // 
             this.combo_impressora.FormattingEnabled = true;
             this.combo_impressora.Location = new System.Drawing.Point(7, 58);
-            this.combo_impressora.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.combo_impressora.Margin = new System.Windows.Forms.Padding(2);
             this.combo_impressora.Name = "combo_impressora";
             this.combo_impressora.Size = new System.Drawing.Size(308, 21);
             this.combo_impressora.TabIndex = 1;
@@ -123,7 +125,7 @@
             this.button4.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button4.BackgroundImage")));
             this.button4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.button4.Location = new System.Drawing.Point(9, 10);
-            this.button4.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button4.Margin = new System.Windows.Forms.Padding(2);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(79, 72);
             this.button4.TabIndex = 15;
@@ -136,7 +138,7 @@
             this.button3.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button3.BackgroundImage")));
             this.button3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.button3.Location = new System.Drawing.Point(259, 10);
-            this.button3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button3.Margin = new System.Windows.Forms.Padding(2);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(79, 72);
             this.button3.TabIndex = 12;
@@ -150,7 +152,7 @@
             this.button2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button2.BackgroundImage")));
             this.button2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.button2.Location = new System.Drawing.Point(176, 10);
-            this.button2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button2.Margin = new System.Windows.Forms.Padding(2);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(79, 72);
             this.button2.TabIndex = 11;
@@ -162,7 +164,7 @@
             this.button1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button1.BackgroundImage")));
             this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.button1.Location = new System.Drawing.Point(92, 10);
-            this.button1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button1.Margin = new System.Windows.Forms.Padding(2);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(79, 72);
             this.button1.TabIndex = 9;
@@ -176,7 +178,7 @@
             this.button5.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button5.BackgroundImage")));
             this.button5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.button5.Location = new System.Drawing.Point(521, 10);
-            this.button5.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button5.Margin = new System.Windows.Forms.Padding(2);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(72, 72);
             this.button5.TabIndex = 17;
@@ -194,6 +196,17 @@
             this.label6.TabIndex = 18;
             this.label6.Text = "Atualizar";
             // 
+            // cb_validar_ncm
+            // 
+            this.cb_validar_ncm.AutoSize = true;
+            this.cb_validar_ncm.Location = new System.Drawing.Point(7, 131);
+            this.cb_validar_ncm.Name = "cb_validar_ncm";
+            this.cb_validar_ncm.Size = new System.Drawing.Size(85, 17);
+            this.cb_validar_ncm.TabIndex = 2;
+            this.cb_validar_ncm.Text = "Validar NCM";
+            this.cb_validar_ncm.UseVisualStyleBackColor = true;
+            this.cb_validar_ncm.CheckedChanged += new System.EventHandler(this.cb_validar_ncm_CheckedChanged);
+            // 
             // Configuracao
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -210,7 +223,7 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.groupBox1);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "Configuracao";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Configuracao";
@@ -237,5 +250,6 @@
         private System.Windows.Forms.ComboBox combo_impressora;
         private System.Windows.Forms.Button button5;
         private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.CheckBox cb_validar_ncm;
     }
 }

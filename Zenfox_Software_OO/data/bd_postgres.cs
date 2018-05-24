@@ -34,6 +34,11 @@ namespace Zenfox_Software_OO.data
 
         }
 
+        public static String getip()
+        {
+            return System.IO.File.ReadAllText(@System.AppDomain.CurrentDomain.BaseDirectory.ToString() + "bd.txt");
+        }
+
 
         public void AbrirConexao()
         {

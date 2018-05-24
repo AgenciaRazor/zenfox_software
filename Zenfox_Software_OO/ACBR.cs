@@ -18,67 +18,77 @@ namespace Zenfox_Software_OO
             Boolean acbr_return = false;
             Boolean ncm_valido = false;
 
+            Zenfox_Software_OO.Cadastros.Configuracao cmd = new Cadastros.Configuracao();
+            Cadastros.Entidade_Configuracao item = cmd.seleciona(new Cadastros.Entidade_Configuracao());
 
-            if (!Directory.Exists("C:/Rede_Sistema"))
-                Directory.CreateDirectory("C:/Rede_Sistema");
-
-            String texto = "NCM.Validar('" + ncm + "')";
-            System.IO.File.WriteAllText(@"C:\Rede_Sistema\ENT.txt", texto);
-
-            Thread.Sleep(200);
-
-            if (!acbr_return)
+            if (item.valida_ncm)
             {
-                Thread.Sleep(500);
-                String[] ncm_result;
-                try
+
+
+                if (!Directory.Exists("C:/Rede_Sistema"))
+                    Directory.CreateDirectory("C:/Rede_Sistema");
+
+                String texto = "NCM.Validar('" + ncm + "')";
+                System.IO.File.WriteAllText(@"C:\Rede_Sistema\ENT.txt", texto);
+
+                Thread.Sleep(200);
+
+                if (!acbr_return)
                 {
-                    ncm_result = System.IO.File.ReadAllText(@"C:\Rede_Sistema\sai.txt").Split(':');
+                    Thread.Sleep(500);
+                    String[] ncm_result;
+                    try
+                    {
+                        ncm_result = System.IO.File.ReadAllText(@"C:\Rede_Sistema\sai.txt").Split(':');
+                    }
+                    catch
+                    {
+                        throw new Exception("Falha ao tentar se comunicar com o SAT !");
+                    }
+                    if (ncm_result.Length > 0)
+                    {
+                        acbr_return = true;
+                        System.IO.File.Delete(@"C:\Rede_Sistema\SAI.txt");
+                        if (ncm_result[0].ToString() == "OK")
+                            ncm_valido = true;
+                    }
                 }
-                catch
+
+
+                if (!acbr_return)
                 {
-                    throw new Exception("Falha ao tentar se comunicar com o SAT !");
+                    Thread.Sleep(2000);
+                    String[] ncm_result = System.IO.File.ReadAllText(@"C:\Rede_Sistema\SAI.txt").Split(':');
+
+                    if (ncm_result.Length > 0)
+                    {
+                        acbr_return = true;
+                        System.IO.File.Delete(@"C:\Rede_Sistema\SAI.txt");
+                        if (ncm_result[0].ToString() == "OK")
+                            ncm_valido = true;
+                    }
                 }
-                if (ncm_result.Length > 0)
+
+                if (!acbr_return)
                 {
-                    acbr_return = true;
-                    System.IO.File.Delete(@"C:\Rede_Sistema\SAI.txt");
-                    if (ncm_result[0].ToString() == "OK")
-                        ncm_valido = true;
+                    Thread.Sleep(5000);
+                    String[] ncm_result = System.IO.File.ReadAllText(@"C:\Rede_Sistema\SAI.txt").Split(':');
+
+                    if (ncm_result.Length > 0)
+                    {
+                        acbr_return = true;
+                        System.IO.File.Delete(@"C:\Rede_Sistema\SAI.txt");
+                        if (ncm_result[0].ToString() == "OK")
+                            ncm_valido = true;
+                    }
                 }
+
+               
             }
-
-
-            if (!acbr_return)
+            else
             {
-                Thread.Sleep(2000);
-                String[] ncm_result = System.IO.File.ReadAllText(@"C:\Rede_Sistema\SAI.txt").Split(':');
-
-                if (ncm_result.Length > 0)
-                {
-                    acbr_return = true;
-                    System.IO.File.Delete(@"C:\Rede_Sistema\SAI.txt");
-                    if (ncm_result[0].ToString() == "OK")
-                        ncm_valido = true;
-                }
+                ncm_valido = true;
             }
-
-            if (!acbr_return)
-            {
-                Thread.Sleep(5000);
-                String[] ncm_result = System.IO.File.ReadAllText(@"C:\Rede_Sistema\SAI.txt").Split(':');
-
-                if (ncm_result.Length > 0)
-                {
-                    acbr_return = true;
-                    System.IO.File.Delete(@"C:\Rede_Sistema\SAI.txt");
-                    if (ncm_result[0].ToString() == "OK")
-                        ncm_valido = true;
-                }
-            }
-
-            ncm_valido = true;
-
             return ncm_valido;
         }
 

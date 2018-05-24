@@ -72,8 +72,10 @@
   <ItemGroup>
     <Compile Include="ACBR.cs" />
     <Compile Include="Cadastros\Compras.cs" />
+    <Compile Include="Cadastros\Configuracao.cs" />
     <Compile Include="Cadastros\Empresa.cs" />
     <Compile Include="Cadastros\Fornecedor.cs" />
+    <Compile Include="Cadastros\Licenca.cs" />
     <Compile Include="Cadastros\Produto.cs" />
     <Compile Include="Cadastros\Usuario.cs" />
     <Compile Include="Cadastros\Vendas.cs" />

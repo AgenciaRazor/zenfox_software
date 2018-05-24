@@ -5,6 +5,8 @@ using System.Data;
 using System.Drawing;
 using System.Globalization;
 using System.Linq;
+using System.Net;
+using System.Net.Sockets;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -19,10 +21,26 @@ namespace Zenfox_Software
         {
             InitializeComponent();
             this.id = id;
-           // Cadastros.Configuracao cmd = new Cadastros.Configuracao();
-           // cmd.ShowDialog();
-           // Application.Exit();
+
+            lbl_local_ip.Text = GetLocalIPAddress();
+            lbl_server_ip.Text = Zenfox_Software_OO.data.bd_postgres.getip().Split(';')[0].Split('=')[1];
+            // Cadastros.Configuracao cmd = new Cadastros.Configuracao();
+            // cmd.ShowDialog();
+            // Application.Exit();
             //btnprodutos_Click(new object(), new EventArgs());
+        }
+
+        public static string GetLocalIPAddress()
+        {
+            var host = Dns.GetHostEntry(Dns.GetHostName());
+            foreach (var ip in host.AddressList)
+            {
+                if (ip.AddressFamily == AddressFamily.InterNetwork)
+                {
+                    return ip.ToString();
+                }
+            }
+            throw new Exception("No network adapters with an IPv4 address in the system!");
         }
 
 
@@ -93,6 +111,11 @@ namespace Zenfox_Software
         {
             Cadastros.Produto cmd = new Cadastros.Produto();
             cmd.ShowDialog();
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

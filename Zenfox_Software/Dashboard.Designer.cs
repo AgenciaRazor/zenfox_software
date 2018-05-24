@@ -33,19 +33,26 @@
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.cadastrosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.configuraçãoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.lbl_dia_semana = new System.Windows.Forms.Label();
+            this.lbl_data = new System.Windows.Forms.Label();
+            this.lbl_hora = new System.Windows.Forms.Label();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.lbl_local_ip = new System.Windows.Forms.Label();
+            this.lbl_server_ip = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.button5 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.btn_abrir_caixa = new System.Windows.Forms.Button();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.lbl_dia_semana = new System.Windows.Forms.Label();
-            this.lbl_data = new System.Windows.Forms.Label();
-            this.lbl_hora = new System.Windows.Forms.Label();
-            this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.menuStrip1.SuspendLayout();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // menuStrip1
@@ -75,6 +82,117 @@
             this.configuraçãoToolStripMenuItem.Text = "Configuração";
             this.configuraçãoToolStripMenuItem.Click += new System.EventHandler(this.configuraçãoToolStripMenuItem_Click);
             // 
+            // panel1
+            // 
+            this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(73)))), ((int)(((byte)(94)))));
+            this.panel1.Controls.Add(this.pictureBox2);
+            this.panel1.Controls.Add(this.pictureBox1);
+            this.panel1.Controls.Add(this.label2);
+            this.panel1.Controls.Add(this.lbl_server_ip);
+            this.panel1.Controls.Add(this.lbl_dia_semana);
+            this.panel1.Controls.Add(this.lbl_local_ip);
+            this.panel1.Controls.Add(this.lbl_data);
+            this.panel1.Controls.Add(this.lbl_hora);
+            this.panel1.Location = new System.Drawing.Point(0, 559);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(1115, 79);
+            this.panel1.TabIndex = 26;
+            // 
+            // lbl_dia_semana
+            // 
+            this.lbl_dia_semana.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.lbl_dia_semana.AutoSize = true;
+            this.lbl_dia_semana.Font = new System.Drawing.Font("Segoe UI Light", 17.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_dia_semana.ForeColor = System.Drawing.SystemColors.Control;
+            this.lbl_dia_semana.Location = new System.Drawing.Point(201, 40);
+            this.lbl_dia_semana.Name = "lbl_dia_semana";
+            this.lbl_dia_semana.Size = new System.Drawing.Size(141, 32);
+            this.lbl_dia_semana.TabIndex = 2;
+            this.lbl_dia_semana.Text = "Quinta-Feira";
+            // 
+            // lbl_data
+            // 
+            this.lbl_data.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.lbl_data.AutoSize = true;
+            this.lbl_data.Font = new System.Drawing.Font("Segoe UI Light", 17.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_data.ForeColor = System.Drawing.SystemColors.Control;
+            this.lbl_data.Location = new System.Drawing.Point(201, 8);
+            this.lbl_data.Name = "lbl_data";
+            this.lbl_data.Size = new System.Drawing.Size(69, 32);
+            this.lbl_data.TabIndex = 1;
+            this.lbl_data.Text = "16/05";
+            // 
+            // lbl_hora
+            // 
+            this.lbl_hora.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.lbl_hora.Font = new System.Drawing.Font("Segoe UI Light", 35F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_hora.ForeColor = System.Drawing.SystemColors.Control;
+            this.lbl_hora.Location = new System.Drawing.Point(77, 8);
+            this.lbl_hora.Name = "lbl_hora";
+            this.lbl_hora.Size = new System.Drawing.Size(134, 62);
+            this.lbl_hora.TabIndex = 0;
+            this.lbl_hora.Text = "00:43";
+            // 
+            // timer1
+            // 
+            this.timer1.Enabled = true;
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
+            // 
+            // lbl_local_ip
+            // 
+            this.lbl_local_ip.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.lbl_local_ip.ForeColor = System.Drawing.Color.White;
+            this.lbl_local_ip.Location = new System.Drawing.Point(876, 24);
+            this.lbl_local_ip.Name = "lbl_local_ip";
+            this.lbl_local_ip.Size = new System.Drawing.Size(195, 16);
+            this.lbl_local_ip.TabIndex = 3;
+            this.lbl_local_ip.Text = "192.168.0.1";
+            this.lbl_local_ip.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // lbl_server_ip
+            // 
+            this.lbl_server_ip.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.lbl_server_ip.ForeColor = System.Drawing.Color.White;
+            this.lbl_server_ip.Location = new System.Drawing.Point(876, 6);
+            this.lbl_server_ip.Name = "lbl_server_ip";
+            this.lbl_server_ip.Size = new System.Drawing.Size(195, 16);
+            this.lbl_server_ip.TabIndex = 4;
+            this.lbl_server_ip.Text = "192.168.0.19";
+            this.lbl_server_ip.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // label2
+            // 
+            this.label2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.label2.ForeColor = System.Drawing.Color.White;
+            this.label2.Location = new System.Drawing.Point(876, 56);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(219, 16);
+            this.label2.TabIndex = 5;
+            this.label2.Text = "V 1.0.0";
+            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.pictureBox2.Image = global::Zenfox_Software.Properties.Resources.windows_client_16;
+            this.pictureBox2.Location = new System.Drawing.Point(1077, 24);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(18, 16);
+            this.pictureBox2.TabIndex = 7;
+            this.pictureBox2.TabStop = false;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.pictureBox1.Image = global::Zenfox_Software.Properties.Resources.server_16;
+            this.pictureBox1.Location = new System.Drawing.Point(1077, 6);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(18, 16);
+            this.pictureBox1.TabIndex = 6;
+            this.pictureBox1.TabStop = false;
+            // 
             // button5
             // 
             this.button5.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
@@ -91,6 +209,7 @@
             this.button5.Text = "Suporte";
             this.button5.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
             this.button5.UseVisualStyleBackColor = false;
+            this.button5.Click += new System.EventHandler(this.button5_Click);
             // 
             // button4
             // 
@@ -180,59 +299,6 @@
             this.btn_abrir_caixa.UseVisualStyleBackColor = false;
             this.btn_abrir_caixa.Click += new System.EventHandler(this.btn_abrir_caixa_Click);
             // 
-            // panel1
-            // 
-            this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(73)))), ((int)(((byte)(94)))));
-            this.panel1.Controls.Add(this.lbl_dia_semana);
-            this.panel1.Controls.Add(this.lbl_data);
-            this.panel1.Controls.Add(this.lbl_hora);
-            this.panel1.Location = new System.Drawing.Point(0, 559);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1115, 79);
-            this.panel1.TabIndex = 26;
-            // 
-            // lbl_dia_semana
-            // 
-            this.lbl_dia_semana.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.lbl_dia_semana.AutoSize = true;
-            this.lbl_dia_semana.Font = new System.Drawing.Font("Segoe UI Light", 17.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_dia_semana.ForeColor = System.Drawing.SystemColors.Control;
-            this.lbl_dia_semana.Location = new System.Drawing.Point(201, 40);
-            this.lbl_dia_semana.Name = "lbl_dia_semana";
-            this.lbl_dia_semana.Size = new System.Drawing.Size(141, 32);
-            this.lbl_dia_semana.TabIndex = 2;
-            this.lbl_dia_semana.Text = "Quinta-Feira";
-            // 
-            // lbl_data
-            // 
-            this.lbl_data.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.lbl_data.AutoSize = true;
-            this.lbl_data.Font = new System.Drawing.Font("Segoe UI Light", 17.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_data.ForeColor = System.Drawing.SystemColors.Control;
-            this.lbl_data.Location = new System.Drawing.Point(201, 8);
-            this.lbl_data.Name = "lbl_data";
-            this.lbl_data.Size = new System.Drawing.Size(69, 32);
-            this.lbl_data.TabIndex = 1;
-            this.lbl_data.Text = "16/05";
-            // 
-            // lbl_hora
-            // 
-            this.lbl_hora.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.lbl_hora.Font = new System.Drawing.Font("Segoe UI Light", 35F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_hora.ForeColor = System.Drawing.SystemColors.Control;
-            this.lbl_hora.Location = new System.Drawing.Point(77, 8);
-            this.lbl_hora.Name = "lbl_hora";
-            this.lbl_hora.Size = new System.Drawing.Size(134, 62);
-            this.lbl_hora.TabIndex = 0;
-            this.lbl_hora.Text = "00:43";
-            // 
-            // timer1
-            // 
-            this.timer1.Enabled = true;
-            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
-            // 
             // Dashboard
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -258,6 +324,8 @@
             this.menuStrip1.PerformLayout();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -278,5 +346,10 @@
         private System.Windows.Forms.Label lbl_data;
         private System.Windows.Forms.Label lbl_hora;
         private System.Windows.Forms.Timer timer1;
+        private System.Windows.Forms.Label lbl_local_ip;
+        private System.Windows.Forms.Label lbl_server_ip;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox pictureBox2;
     }
 }

@@ -385,6 +385,9 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Paomedia-Small-N-Flat-Shop.ico" />
+    <None Include="Resources\windows-client-16.png" />
+    <None Include="Resources\server-16.png" />
+    <None Include="Resources\logo.jpg" />
   </ItemGroup>
   <ItemGroup>
     <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">

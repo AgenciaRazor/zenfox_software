@@ -42,7 +42,7 @@
             // button1
             // 
             this.button1.Location = new System.Drawing.Point(70, 286);
-            this.button1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button1.Margin = new System.Windows.Forms.Padding(2);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(179, 23);
             this.button1.TabIndex = 4;
@@ -89,7 +89,7 @@
             // txt_senha
             // 
             this.txt_senha.Location = new System.Drawing.Point(45, 217);
-            this.txt_senha.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txt_senha.Margin = new System.Windows.Forms.Padding(2);
             this.txt_senha.Name = "txt_senha";
             this.txt_senha.Size = new System.Drawing.Size(229, 20);
             this.txt_senha.TabIndex = 2;
@@ -108,7 +108,7 @@
             // txt_confirmacao_senha
             // 
             this.txt_confirmacao_senha.Location = new System.Drawing.Point(45, 254);
-            this.txt_confirmacao_senha.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txt_confirmacao_senha.Margin = new System.Windows.Forms.Padding(2);
             this.txt_confirmacao_senha.Name = "txt_confirmacao_senha";
             this.txt_confirmacao_senha.Size = new System.Drawing.Size(229, 20);
             this.txt_confirmacao_senha.TabIndex = 3;
@@ -129,7 +129,7 @@
             // txt_cnpj
             // 
             this.txt_cnpj.Location = new System.Drawing.Point(45, 180);
-            this.txt_cnpj.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txt_cnpj.Margin = new System.Windows.Forms.Padding(2);
             this.txt_cnpj.Mask = "00.000.000/0000-00";
             this.txt_cnpj.Name = "txt_cnpj";
             this.txt_cnpj.Size = new System.Drawing.Size(229, 20);
@@ -149,10 +149,10 @@
             this.Controls.Add(this.label_descricao);
             this.Controls.Add(this.label_titulo);
             this.Controls.Add(this.button1);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "inicial";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Form1";
+            this.Text = "Inicializando Sistema";
             this.ResumeLayout(false);
             this.PerformLayout();
 

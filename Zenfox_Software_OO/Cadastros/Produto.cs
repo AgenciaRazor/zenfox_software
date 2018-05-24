@@ -121,6 +121,7 @@ namespace Zenfox_Software_OO.Cadastros
                 sql.Comando.Parameters.AddWithValue("@nome", item.nome_produto);
             }
 
+            sb.Append(" order by nome asc");
             sql.Comando.CommandText = sb.ToString();
             DataTable dt = sql.RetornaDados_v2_dt();
             sql.FechaConexao();
